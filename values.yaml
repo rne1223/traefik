@@ -1,0 +1,20 @@
+IngressRoute:
+  enable: true 
+  url: "dev.rtrmotion.com"
+  connect:
+    service: nginx 
+    port: 8080 
+  selfSigned: true 
+  email: "email@hello.com" # will only be use if selfSigned is false
+
+  # http-middleware:
+  #   - redirectScheme
+  #   - addPrefix
+  # https-middleware:
+  #   - redirectScheme
+  #   - addPrefix
+  # letsEncrypt:
+  #   enable: true 
+  #   staging: false 
+  #   organizations: RTRmotion
+  #   email: rne1223@gmail.com
