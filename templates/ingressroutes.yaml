@@ -13,7 +13,10 @@ spec:
     services:
     - name: {{ .Values.IngressRoute.connect.service }} 
       port: {{ .Values.IngressRoute.connect.port }} 
-    # middleware:
+    middlewares:
+    {{- range $name, $middleware := .Values.IngressRoute.httpMiddleware }}
+    - name: {{ $name }}
+    {{- end }}
 ---
 ## Traefik HTTPS IngressRoute Resources
 apiVersion: traefik.containo.us/v1alpha1
@@ -29,7 +32,10 @@ spec:
     services:
     - name: {{ .Values.IngressRoute.connect.service }} 
       port: {{ .Values.IngressRoute.connect.port }} 
-    # middleware:
+    middlewares:
+    {{- range $name, $middleware := .Values.IngressRoute.httpsMiddleware }}
+    - name: {{ $name }}
+    {{- end }}
   tls:
     secretName: {{ include "traefik.name" .}}-crt
 {{- end }}
