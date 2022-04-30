@@ -6,5 +6,5 @@ kind: Middleware
 metadata:
   name: {{ $name }} 
 spec: 
-{{ toYaml $middleware | indent 2 }}
+{{- toYaml $middleware | nindent 2 }}
 {{- end }} 

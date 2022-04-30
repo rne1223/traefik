@@ -11,6 +11,7 @@ IngressRoute:
       redirectScheme:
         scheme: https
         permanent: true
+  # httpsMiddleware:
     # auth:
     #   basicAuth:
     #     secret: secretName 
@@ -20,6 +21,3 @@ IngressRoute:
     # prefix:
     #   addPrefix:
     #     prefix: /foo
-  # https-middleware:
-  #   - redirectScheme
-  #   - addPrefix
