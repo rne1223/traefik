@@ -11,8 +11,8 @@ spec:
   - kind: Rule
     match: Host({{ .Values.IngressRoute.url | quote }})
     services:
-    - name: {{ .Values.IngressRoute.connect.service }} 
-      port: {{ .Values.IngressRoute.connect.port }} 
+    - name: {{ .Values.IngressRoute.serviceName | default "Service"}} 
+      port: {{ .Values.IngressRoute.servicePort | default 80}} 
     middlewares:
     {{- range $name, $middleware := .Values.IngressRoute.httpMiddleware }}
     - name: {{ $name }}
@@ -30,8 +30,8 @@ spec:
   - kind: Rule
     match: Host({{ .Values.IngressRoute.url | quote }})
     services:
-    - name: {{ .Values.IngressRoute.connect.service }} 
-      port: {{ .Values.IngressRoute.connect.port }} 
+    - name: {{ .Values.IngressRoute.serviceName | default "Service"}} 
+      port: {{ .Values.IngressRoute.servicePort | default 80}} 
     middlewares:
     {{- range $name, $middleware := .Values.IngressRoute.httpsMiddleware }}
     - name: {{ $name }}

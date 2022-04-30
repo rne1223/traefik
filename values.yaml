@@ -3,6 +3,8 @@ IngressRoute:
   selfSigned: true 
   url: "dev.rtrmotion.com"
   email: "email@hello.com" # will only be use if selfSigned is false
+  # serviceName: "FastApi"
+  # sevicePort: 8080
   httpMiddleware:
     scheme:
       redirectScheme:
