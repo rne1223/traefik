@@ -9,6 +9,7 @@ entries:
     name: traefik
     type: application
     urls:
-    - https://rne1223.github.io/traefik-helm-chart/traefik-0.1.1.tgz
+    - https://rne1223.github.io/traefik-helm-chart
+      #- https://rne1223.github.io/traefik-helm-chart/traefik-0.1.1.tgz
     version: 0.1.1
 generated: "2022-05-03T10:48:27.4391896-07:00"
