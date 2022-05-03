@@ -1,3 +1,14 @@
 apiVersion: v1
-entries: {}
-generated: "2022-05-03T10:39:12.6294993-07:00"
+entries:
+  traefik:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-05-03T10:48:27.4401962-07:00"
+    description: A Helm chart for Kubernetes
+    digest: fac11e5b7fc2df628adc6b1f513db5d00fe201684281f67e5ed7970ebab9b4e3
+    name: traefik
+    type: application
+    urls:
+    - https://rne1223.github.io/traefik-helm-chart/traefik-0.1.1.tgz
+    version: 0.1.1
+generated: "2022-05-03T10:48:27.4391896-07:00"
