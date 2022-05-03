@@ -20,3 +20,4 @@ IngressRoute:
     # prefix:
     #   addPrefix:
     #     prefix: /foo
+    #     this is a test
